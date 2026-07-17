@@ -77,9 +77,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
    HERO SECTION
    ============================================ */
 .hero {
-  min-height: 100vh; position: relative;
   display: flex; align-items: center;
   background: var(--darker); overflow: hidden;
+}
+.hero{
+    min-height: calc(100dvh - var(--header-height));
 }
 .hero-bg {
   position: absolute; inset: 0;
@@ -1761,4 +1763,38 @@ body {
   .page-header { padding: 2rem 0; background: white; }
   .page-header h1 { color: black; }
   a { text-decoration: underline; color: black; }
+}
+@media (max-width: 767px){
+
+    html{
+        -webkit-text-size-adjust:100%;
+    }
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .hero{
+        min-height:100dvh;
+    }
+
+}
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container,
+.container-fluid,
+.row {
+    max-width: 100%;
+}
+@media (max-width:768px){
+
+    .hero-float-card{
+        display:none;
+    }
+
 }
